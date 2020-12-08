@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+<meta charset="UTF-8"/>
+<title>Sistema de Triângulos</title>
+</head>
+<body>
+	<h1>Sistema de Triângulos</h1>
+	<p>
+		O principal objetivo do sistema é aprensentar uma forma no qual os alunos consigam inserir 
+		lados de um possível triângulo e o sistema devolva o tipo de triângulo baseado apenas nas regras
+		dos lados de um triângulo.
+	</p>
+	<br/>
+	<h3>Exemplos:</h3>
+	<div class="example">
+	
+		<h5>Considerando os lados apresentados, os alunos terão o seguinte retorno:</h5>
+		
+		<table concordion:execute="#mensagem = calcularTriangulo(#lado1, #lado2, #lado3)">
+			<tr>
+				<th concordion:set="#lado1">Lado 1</th>
+				<th concordion:set="#lado2">Lado 2</th>
+				<th concordion:set="#lado3">Lado 3</th>
+				<th concordion:assertEquals="#mensagem">Tipo de Triângulo</th>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>5</td>
+				<td>5</td>
+				<td>Triângulo Equilátero</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>4</td>
+				<td>5</td>
+				<td>Triângulo Isósceles</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
