@@ -17,8 +17,4 @@ Funcionalidade: Calculo de triangulos
       | lado1 | lado2 | lado3 | resultado            |
       |     1 |     1 |     1 | Triângulo Equilátero |
       |     5 |     3 |     4 | Triângulo Escaleno   |
-      |     1 |     1 |     1 | Triângulo Equilátero |
       |     2 |     3 |     3 | Triângulo Isósceles  |
-      |     0 |     0 |     0 | 									   |
-      |    -3 |    -3 |    -3 | 									   |
-      |				|				|				|											 |
