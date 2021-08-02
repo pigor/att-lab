@@ -33,7 +33,7 @@ public class TrianguloAceitacao {
 		
 		driver.quit();
 		
-		assertEquals("Triângulo Equilatero", mensagem);
+		assertEquals("Triângulo Equilátero", mensagem);
 		
 	}
 	

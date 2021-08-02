@@ -18,7 +18,7 @@ public class RobotAceitacao {
 	}
 
 	@Test
-	public void trianguloEquilatero() {
+	public void testDeMovimentacao() {
 		
 		WebDriver driver = new FirefoxDriver();
 		

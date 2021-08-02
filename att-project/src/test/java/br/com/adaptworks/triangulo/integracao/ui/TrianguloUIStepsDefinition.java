@@ -43,11 +43,6 @@ public class TrianguloUIStepsDefinition {
 	
 	@Entao("exibe a mensagem {string}")
 	public void exibe_a_mensagem(String mensagem) throws Throwable {
-//		new WebDriverWait(driver,10L).until(new ExpectedCondition<Boolean>() {
-//           public Boolean apply(WebDriver d) {
-//               return mensagem.equals(d.findElement(By.cssSelector(".mensagem")).getText());
-//           }
-//       });
 		assertEquals(mensagem, driver.findElement(By.cssSelector(".mensagem")).getText());
 	}
 	
