@@ -20,3 +20,5 @@ Funcionalidade: Calculo de triangulos
       |     2 |     2 |     3 | Triângulo Isósceles  |
       |     2 |     3 |     3 | Triângulo Isósceles  |
       |     1 |     2 |     3 | Triângulo Inválido   |
+      |    -2 |     2 |     3 | Triângulo Inválido   |
+      |     0 |     0 |     3 | Triângulo Inválido   |

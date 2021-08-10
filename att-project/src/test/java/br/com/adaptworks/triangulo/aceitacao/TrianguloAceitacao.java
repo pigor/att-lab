@@ -38,6 +38,27 @@ public class TrianguloAceitacao {
 	}
 	
 	@Test
+	public void trianguloIsosceles() {
+		
+		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("http://triangulo-1.herokuapp.com");
+		
+		driver.findElement(By.id("triangulo_lado1")).sendKeys("3");
+		driver.findElement(By.id("triangulo_lado2")).sendKeys("5");
+		driver.findElement(By.id("triangulo_lado3")).sendKeys("5");
+		
+		driver.findElement(By.name("commit")).click();
+		
+		String mensagem = driver.findElement(By.className("mensagem")).getText();
+		
+		driver.quit();
+		
+		assertEquals("Triângulo Isósceles", mensagem);
+		
+	}
+	
+	@Test
 	public void trianguloEscaleno() {
 		
 		WebDriver driver = new FirefoxDriver();

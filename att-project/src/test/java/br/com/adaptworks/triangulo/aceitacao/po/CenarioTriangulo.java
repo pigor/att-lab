@@ -35,6 +35,20 @@ public class CenarioTriangulo {
 		assertEquals("Triângulo Equilatero", pagina.pegarResultado());
 	}	
 	
+	@Test
+	public void testeTrianguloIsosceles() {
+		TrianguloPagina pagina = new TrianguloPagina(driver);
+		pagina.calculaTriangulo("1","2","2");
+		assertEquals("Triângulo Isósceles", pagina.pegarResultado());
+	}	
+	
+	@Test
+	public void testeTrianguloEscaleno() {
+		TrianguloPagina pagina = new TrianguloPagina(driver);
+		pagina.calculaTriangulo("3","2","4");
+		assertEquals("Triângulo Escaleno", pagina.pegarResultado());
+	}	
+	
 	/*
 	 * O teste abaixo utiliza a forma descritiva do page objects
 	 */
