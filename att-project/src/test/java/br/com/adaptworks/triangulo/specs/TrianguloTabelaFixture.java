@@ -9,6 +9,6 @@ import br.com.adaptworks.triangulo.Triangulo;
 public class TrianguloTabelaFixture {
 
 	public String calcularTriangulo(int lado1, int lado2, int lado3) {
-		return new Triangulo().classificar(lado1, lado2, lado3);
+		return new Triangulo().calcular(lado1, lado2, lado3);
 	}
 }

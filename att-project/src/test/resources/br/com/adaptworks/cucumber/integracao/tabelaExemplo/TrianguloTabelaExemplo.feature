@@ -15,6 +15,6 @@ Funcionalidade: Calculo de triangulos
 
     Exemplos: 
       | lado1 | lado2 | lado3 | resultado            |
-      |     1 |     1 |     1 | Triângulo Equilátero |
+      |     1 |     2 |     1 | Triângulo Equilátero |
       |     5 |     3 |     4 | Triângulo Escaleno   |
       |     2 |     3 |     3 | Triângulo Isósceles  |

@@ -15,7 +15,7 @@ import io.cucumber.java.pt.Quando;
 public class TrianguloTabelaStepsDefinition {
 
 	// atributos criados para compartilhar os lados em todos os metodos
-	Integer lado1, lado2, lado3;
+	String lado1, lado2, lado3;
 	List<LadosTriangulo> lados;
 	
 	@DataTableType
@@ -49,17 +49,17 @@ public class TrianguloTabelaStepsDefinition {
 			lado2 = ladosTriangulo.lado2;
 			lado3 = ladosTriangulo.lado3;
 
-			assertEquals(arg1, new Triangulo().classificar(lado1, lado2, lado3));
+			assertEquals(arg1, new Triangulo().calcular(lado1, lado2, lado3));
 		}
 	}
 }
 
 class LadosTriangulo {
-	Integer lado1, lado2, lado3;
+	String lado1, lado2, lado3;
 	
 	LadosTriangulo(String lado1, String lado2, String lado3) {
-		this.lado1 = Integer.parseInt(lado1);
-		this.lado2 = Integer.parseInt(lado2);
-		this.lado3 = Integer.parseInt(lado3);
+		this.lado1 = lado1;
+		this.lado2 = lado2;
+		this.lado3 = lado3;
 	}
 }

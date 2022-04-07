@@ -25,33 +25,21 @@ public class TrianguloTabelaExemploStepsDefinition {
 	public void eu_informo_o_lado1_com_valor(int l1) throws Throwable {
 	    lado1 = l1;
 	}
-	
-	@Quando("eu informo o lado1 com valor ")
-	public void eu_informo_o_lado1_com_valor() throws Throwable {
-	}
 
 	@E("eu informo o lado2 com valor {int}")
 	public void eu_informo_o_lado2_com_valor(int l2) throws Throwable {
 	    lado2 = l2;
 	}	
-	
-	@E("eu informo o lado2 com valor ")
-	public void eu_informo_o_lado2_com_valor() throws Throwable {
-	}
 
 	@Quando("eu informo o lado3 com valor {int}")
 	public void eu_informo_o_lado3_com_valor(int l3) throws Throwable {
 	    lado3 = l3;
 	}
 	
-	@Quando("eu informo o lado3 com valor ")
-	public void eu_informo_o_lado3_com_valor() throws Throwable {
-	}
-	
 	@Entao("exibe a mensagem {string}")
 	public void exibe_a_mensagem(String mensagem) throws Throwable {
 		Triangulo triangulo = new Triangulo();
-		String resultado = triangulo.classificar(lado1, lado2, lado3);
+		String resultado = triangulo.calcular(lado1, lado2, lado3);
 	    assertEquals(mensagem, resultado);
 	}
 	

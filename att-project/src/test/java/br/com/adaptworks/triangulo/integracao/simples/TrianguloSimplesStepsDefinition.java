@@ -1,43 +1,38 @@
 package br.com.adaptworks.triangulo.integracao.simples;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 
 import br.com.adaptworks.triangulo.Triangulo;
 import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 
 public class TrianguloSimplesStepsDefinition {
 	
-	int lado1, lado2, lado3;
-	
-	@Dado("que eu estou na pagina de consulta de triangulo")
-	public void que_eu_estou_na_pagina_de_consulta_de_triangulo() throws Throwable {
-	    assertTrue(true);
+	String lado1, lado2, lado3;
+
+	@Dado("que o aluno está na tela do classificador de triângulo")
+	public void que_o_aluno_está_na_tela_do_classificador_de_triângulo() {
+	    assert(true);
 	}
 
-	@Quando("eu preencho o lado1 com {int}")
-	public void eu_preencho_o_lado1_com(int arg1) throws Throwable {
-	    lado1 = arg1;
+	@Quando("inserir no lado1 o valor {string}")
+	public void inserir_no_lado1_o_valor(String string) {
+	    lado1 = string;
+	}
+	@Quando("inserir no lado2 o valor {string}")
+	public void inserir_no_lado2_o_valor(String string) {
+	    lado2 = string;
+	}
+	@Quando("inserir no lado3 o valor {string}")
+	public void inserir_no_lado3_o_valor(String string) {
+		lado3 = string;
 	}
 	
-	@E("eu preencho o lado2 com {int}")
-	public void eu_preencho_o_lado2_com(int arg1) throws Throwable {
-	    lado2 = arg1;
-	}
-	
-	@E("eu preencho o lado3 com {int}")
-	public void eu_preencho_o_lado3_com(int arg1) throws Throwable {
-	    lado3 = arg1;
-	}
-
-	@Entao("apresenta mensagem {string}")
-	public void apresenta_mensagem(String arg1) throws Throwable {
-		String mensagem = new Triangulo().classificar(lado1, lado2, lado3);
+	@Então("é exibida a mensagem {string}")
+	public void é_exibida_a_mensagem(String string) {
+		String mensagem = new Triangulo().calcular(lado1, lado2, lado3);
 		
-		Assert.assertEquals(arg1, mensagem);
+		assertEquals(string, mensagem);
 	}
 }
