@@ -21,7 +21,7 @@ public class TrianguloAceitacao {
 		
 		WebDriver driver = new FirefoxDriver();
 		
-		driver.get("http://triangulo-1.herokuapp.com");
+		driver.get("https://triangulos.fly.dev");
 		
 		driver.findElement(By.id("triangulo_lado1")).sendKeys("5");
 		driver.findElement(By.id("triangulo_lado2")).sendKeys("5");
@@ -33,7 +33,7 @@ public class TrianguloAceitacao {
 		
 		driver.quit();
 		
-		assertEquals("Triângulo Equilatero", mensagem);
+		assertEquals("Triângulo Equilátero", mensagem);
 		
 	}
 	
@@ -42,7 +42,7 @@ public class TrianguloAceitacao {
 		
 		WebDriver driver = new FirefoxDriver();
 		
-		driver.get("http://triangulo-1.herokuapp.com");
+		driver.get("https://triangulos.fly.dev");
 		
 		driver.findElement(By.id("triangulo_lado1")).sendKeys("3");
 		driver.findElement(By.id("triangulo_lado2")).sendKeys("5");

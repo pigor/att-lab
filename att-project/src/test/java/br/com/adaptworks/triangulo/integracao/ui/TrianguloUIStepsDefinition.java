@@ -22,7 +22,7 @@ public class TrianguloUIStepsDefinition {
 	public void os_tres_campos_de_entrada() throws Throwable {
 		System.setProperty("webdriver.gecko.driver","/home/pigor/developer/drivers/geckodriver");
 		driver = new FirefoxDriver();
-		driver.get("http://triangulo-1.herokuapp.com");
+		driver.get("https://triangulos.fly.dev");
 	}
 	
 	@Quando("eu informo o lado1 com valor {}")

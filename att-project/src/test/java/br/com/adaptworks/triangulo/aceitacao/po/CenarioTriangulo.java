@@ -17,7 +17,7 @@ public class CenarioTriangulo {
 		System.setProperty("webdriver.gecko.driver","/home/pigor/developer/drivers/geckodriver");
 		
 		driver = new FirefoxDriver();
-		driver.get("http://triangulo-1.herokuapp.com");
+		driver.get("https://triangulos.fly.dev");
 	}
 	
 	@After
@@ -32,7 +32,7 @@ public class CenarioTriangulo {
 	public void testeTrianguloEquilatero() {
 		TrianguloPagina pagina = new TrianguloPagina(driver);
 		pagina.calculaTriangulo("1","1","1");
-		assertEquals("Triângulo Equilatero", pagina.pegarResultado());
+		assertEquals("Triângulo Equilátero", pagina.pegarResultado());
 	}	
 	
 	/*
@@ -45,6 +45,6 @@ public class CenarioTriangulo {
 		pagina.preencherLado2("3");
 		pagina.preencherLado3("3");
 		pagina.clicarNoBotaoCalcular();
-		assertEquals("Triângulo Equilatero", pagina.pegarResultado());
+		assertEquals("Triângulo Equilátero", pagina.pegarResultado());
 	}
 }
