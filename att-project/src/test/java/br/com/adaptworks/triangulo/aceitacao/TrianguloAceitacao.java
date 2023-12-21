@@ -57,4 +57,25 @@ public class TrianguloAceitacao {
 		assertEquals("Triângulo Escaleno", mensagem);
 		
 	}
+	
+	@Test
+	public void trianguloIsosceles() {
+		
+		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("https://triangulos.fly.dev");
+		
+		driver.findElement(By.id("triangulo_lado1")).sendKeys("3");
+		driver.findElement(By.id("triangulo_lado2")).sendKeys("5");
+		driver.findElement(By.id("triangulo_lado3")).sendKeys("3");
+		
+		driver.findElement(By.name("commit")).click();
+		
+		String mensagem = driver.findElement(By.className("mensagem")).getText();
+		
+		driver.quit();
+		
+		assertEquals("Triângulo Isósceles", mensagem);
+		
+	}
 }
